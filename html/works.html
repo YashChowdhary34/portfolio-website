@@ -7,6 +7,37 @@
     <title>My-Works</title>
   </head>
   <body>
+    <div class="theme-toggle">
+      <label class="theme-switch">
+        <input type="checkbox" class="theme-input" />
+        <div class="theme-slider">
+          <svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="M4.93 4.93l1.41 1.41" />
+            <path d="M17.66 17.66l1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="M6.34 17.66l-1.41 1.41" />
+            <path d="M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </div>
+      </label>
+    </div>
     <nav>
       <div class="nav-links">
         <a href="../index.html">Home</a>
@@ -79,6 +110,54 @@
         gallery.classList.add("list-view");
         listBtn.classList.add("active");
         gridBtn.classList.remove("active");
+      });
+
+      // Theme Toggle Functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.querySelector(".theme-input");
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+          if (savedTheme === "dark") {
+            themeToggle.checked = true;
+          }
+        }
+
+        // Theme toggle handler
+        themeToggle.addEventListener("change", function () {
+          if (this.checked) {
+            transitionTheme("dark");
+          } else {
+            transitionTheme("light");
+          }
+        });
+
+        // Theme transition function
+        function transitionTheme(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+
+          // Add animation class to main elements
+          const elements = document.querySelectorAll(
+            "body, .header-section, .about-section, .slogan-section, .footer-section"
+          );
+          elements.forEach((element) => {
+            element.style.transition =
+              "background-color var(--theme-transition), color var(--theme-transition)";
+          });
+        }
+
+        // Add hover animation to toggle
+        const themeSwitch = document.querySelector(".theme-switch");
+        themeSwitch.addEventListener("mouseenter", () => {
+          themeSwitch.style.transform = "scale(1.05)";
+        });
+
+        themeSwitch.addEventListener("mouseleave", () => {
+          themeSwitch.style.transform = "scale(1)";
+        });
       });
     </script>
   </body>
