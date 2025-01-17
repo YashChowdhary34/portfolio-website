@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa">
+        <animate attributeName="stop-color" values="#f8f9fa;#ced4da;#f8f9fa" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#ced4da"/>
+    </linearGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".15"/>
+    </filter>
+
+    <filter id="orbitGlow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#6c757d" fill-opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  <rect width="100%" height="100%" fill="url(#dots)"/>
+
+  <g transform="translate(1220 540) scale(.9)">
+    <g filter="url(#shadow)">
+      <path d="M0 0L200 0A200 200 0 0 1-100 173.2L-60 103.9A120 120 0 0 0 120 0Z" fill="#3a5a40" fill-opacity=".85"/>
+      <path d="M0 0L-100 173.2A200 200 0 0 1-200 0L-120 0A120 120 0 0 0-60 103.9Z" fill="#6c757d" fill-opacity=".85"/>
+      <path d="M0 0L-200 0A200 200 0 0 1 200 0L120 0A120 120 0 0 0-120 0Z" fill="#495057" fill-opacity=".85"/>
+    </g>
+
+    <g font-family="Inter,sans-serif" filter="url(#shadow)">
+      <g>
+        <text x="280" y="0" font-size="24" font-weight="400" fill="#212529">Data Analyst</text>
+        <text x="280" y="35" font-size="36" font-weight="600" fill="#212529">60%</text>
+        <line x1="200" y1="10" x2="275" y2="10" stroke="#3a5a40" stroke-width="2"/>
+      </g>
+      <g>
+        <text x="-330" y="80" font-size="24" font-weight="400" fill="#212529">Designer</text>
+        <text x="-330" y="115" font-size="36" font-weight="600" fill="#212529">10%</text>
+        <line x1="-200" y1="90" x2="-325" y2="90" stroke="#6c757d" stroke-width="2"/>
+      </g>
+      <g>
+        <text x="-330" y="-80" font-size="24" font-weight="400" fill="#212529">Developer</text>
+        <text x="-330" y="-45" font-size="36" font-weight="600" fill="#212529">30%</text>
+        <line x1="-200" y1="-72" x2="-325" y2="-72" stroke="#495057" stroke-width="2"/>
+      </g>
+    </g>
+
+    <g>
+      <circle r="8" fill="#3a5a40" filter="url(#orbitGlow)">
+        <animateMotion dur="12s" repeatCount="indefinite" 
+          path="M0 0m-250 0a250 250 0 1 1 500 0a250 250 0 1 1-500 0"/>
+        <animate attributeName="opacity" values=".6;.9;.6" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#6c757d" filter="url(#orbitGlow)">
+        <animateMotion dur="8s" repeatCount="indefinite"
+          path="M0 0m-220 0a220 220 0 1 1 440 0a220 220 0 1 1-440 0"/>
+        <animate attributeName="opacity" values=".7;1;.7" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="5" fill="#495057" filter="url(#orbitGlow)">
+        <animateMotion dur="6s" repeatCount="indefinite"
+          path="M0 0m-190 0a190 190 0 1 1 380 0a190 190 0 1 1-380 0"/>
+        <animate attributeName="opacity" values=".5;.8;.5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <g>
+    <circle cx="200" cy="400" r="8" fill="#495057" opacity=".15">
+      <animate attributeName="cy" values="400;385;400" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".15;.3;.15" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="4" fill="#adb5bd" opacity=".25">
+      <animate attributeName="cy" values="200;180;200" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".25;.4;.25" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="400" r="3" fill="#6c757d" opacity=".3">
+      <animate attributeName="cy" values="400;385;400" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".3;.5;.3" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

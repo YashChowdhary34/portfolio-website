@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --color-lightest: #f8f9fa;
+  --color-light: #ced4da;
+  --color-medium: #adb5bd;
+  --color-dark: #6c757d;
+  --color-darker: #495057;
+  --color-darkest: #212529;
+  --color-accent: #3a5a40;
+
+  --primary-font: "Inter", sans-serif;
+  --padding-inline: clamp(1.5rem, 5vw, 4rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--color-lightest);
+  color: var(--color-darkest);
+  min-height: 100vh;
+  padding: var(--padding-inline);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: clamp(2rem, 5vh, 4rem);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vh, 3rem);
+}
+
+.info-group {
+  margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
+}
+
+.info-label {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.info-content {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.5;
+}
+
+.page-title {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  margin-top: auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vh, 2.5rem);
+}
+
+.form-intro {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  margin-bottom: clamp(2rem, 4vh, 3rem);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  color: var(--color-darkest);
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-bottom: 1px solid var(--color-darker);
+  font-family: inherit;
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  background: transparent;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-button {
+  width: 100%;
+  padding: clamp(0.875rem, 1.5vh, 1rem);
+  margin-top: 1rem;
+  border: 1px solid #333;
+  background: transparent;
+  font-family: inherit;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  background: var(--color-darkest);
+  color: var(--color-lightest);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+}
+
+.social-links a {
+  color: var(--color-darkest);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-darkest);
+  background: var(--color-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: clamp(2rem, 5vh, 4rem);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .info-group {
+    margin-bottom: clamp(1rem, 1vh, 2rem);
+  }
+
+  .info-label {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    color: var(--color-dark);
+    margin-bottom: 0.1rem;
+  }
+
+  .info-content {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    line-height: 1.5;
+  }
+
+  .page-title {
+    position: absolute;
+    top: 2rem;
+    left: 1.4rem;
+    z-index: 100;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vh, 2.5rem);
+  }
+
+  .form-intro {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: clamp(1rem, 2vh, 2rem);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    color: var(--color-darkest);
+    font-weight: 500;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 1px solid var(--color-darker);
+    font-family: inherit;
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
+    background: transparent;
+  }
+
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .form-button {
+    width: 100%;
+    padding: clamp(0.875rem, 1.5vh, 1rem);
+    margin-top: 1rem;
+    border: 1px solid #333;
+    background: transparent;
+    font-family: inherit;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .form-button:hover {
+    background: var(--color-darkest);
+    color: var(--color-lightest);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+  }
+
+  .social-links a {
+    color: var(--color-darkest);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .social-links a:hover {
+    opacity: 1;
+  }
+}

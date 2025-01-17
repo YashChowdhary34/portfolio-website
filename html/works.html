@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles-works-reads.css" />
+    <title>My-Works</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./reads.html">Reads</a>
+      </div>
+    </nav>
+
+    <h1>works</h1>
+
+    <div class="view-controls">
+      <button class="view-button grid-btn active">Grid View</button>
+      <button class="view-button list-btn">List View</button>
+    </div>
+
+    <div class="gallery">
+      <div class="project">
+        <img
+          src="../src/clv_behaviour_analysis.jpg"
+          alt="CLV Behaviour Analysis"
+        />
+        <div class="project-info">
+          <h3>CLV Behaviour Analysis</h3>
+          <p>Predictive ML Model</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/coingecko-ooks-coin.png" alt="Crypto Forecasting" />
+        <div class="project-info">
+          <h3>Crypto Forecasting</h3>
+          <p>Automated Reporting</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/segmentation.jpg" alt="Multichannel ETL" />
+        <div class="project-info">
+          <h3>Multichannel ETL</h3>
+          <p>Customer Segmentation Analysis</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/fa8fb4162101761.63d0259bef301.jpg" alt="Pokemon" />
+        <div class="project-info">
+          <h3>Pokemon</h3>
+          <p>Viewer Analysis</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/microsoft-excel-header.jpg" alt="Dashboard" />
+        <div class="project-info">
+          <h3>Excel Dashboard</h3>
+          <p>Bike Sales</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const gridBtn = document.querySelector(".grid-btn");
+      const listBtn = document.querySelector(".list-btn");
+      const gallery = document.querySelector(".gallery");
+
+      gridBtn.addEventListener("click", () => {
+        gallery.classList.remove("list-view");
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+      });
+
+      listBtn.addEventListener("click", () => {
+        gallery.classList.add("list-view");
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

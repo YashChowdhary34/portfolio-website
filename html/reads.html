@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles-works-reads.css" />
+    <title>My-Reads</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./works.html">Works</a>
+      </div>
+    </nav>
+
+    <h1>reads</h1>
+
+    <div class="view-controls">
+      <button class="view-button grid-btn active">Grid View</button>
+      <button class="view-button list-btn">List View</button>
+    </div>
+
+    <div class="gallery">
+      <div class="project">
+        <img
+          src="../src/stoytelling-with-data.jpg"
+          alt="Storytelling with Data"
+        />
+        <div class="project-info">
+          <h3>Storytelling with Data</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img
+          src="../src/how-to-fail-at-almost-everything-still-win-big.jpg"
+          alt="How to Fail at Almost Everything and Still Win Big"
+        />
+        <div class="project-info">
+          <h3>How to Fail at Almost Everything and Still Win Big</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/the-science-of-fear.png" alt="The Science of Fear" />
+        <div class="project-info">
+          <h3>The Science of Fear</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img
+          src="../src/the-upsides-of-stress.jpg"
+          alt="The Upside of Stress"
+        />
+        <div class="project-info">
+          <h3>The Upside of Stress</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img
+          src="../src/thinking-fast-and-slow.jpg"
+          alt="Thinking, Fast and Slow"
+        />
+        <div class="project-info">
+          <h3>Thinking, Fast and Slow</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img
+          src="../src/the-courage-to-be-disliked.jpg"
+          alt="The Courage to Be Disliked"
+        />
+        <div class="project-info">
+          <h3>The Courage to Be Disliked</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/prediction-machines.jpg" alt="Prediction Machines" />
+        <div class="project-info">
+          <h3>Prediction Machines</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../src/the-airbnb-story.jpg" alt="The Airbnb Story" />
+        <div class="project-info">
+          <h3>The Airbnb Story</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const gridBtn = document.querySelector(".grid-btn");
+      const listBtn = document.querySelector(".list-btn");
+      const gallery = document.querySelector(".gallery");
+
+      gridBtn.addEventListener("click", () => {
+        gallery.classList.remove("list-view");
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+      });
+
+      listBtn.addEventListener("click", () => {
+        gallery.classList.add("list-view");
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
