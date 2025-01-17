@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
 :root {
+  /*light theme colors*/
   --color-lightest: #f8f9fa;
   --color-light: #ced4da;
   --color-medium: #adb5bd;
@@ -9,7 +12,7 @@
   --color-darkest: #212529;
   --color-accent: #3a5a40;
 
-  /* Dark mode colors - will be applied when data-theme="dark" */
+  /* Dark mode colors  */
   --color-lightest-dark: #1a1b1e;
   --color-light-dark: #2c2e33;
   --color-medium-dark: #495057;
@@ -18,6 +21,7 @@
   --color-darkest-dark: #e9ecef;
   --color-accent-dark: #588157;
 
+  --header-font: "Familjen Grotesk", sans-serif;
   --primary-font: "Inter", sans-serif;
   --secondary-font: "Outfit", sans-serif;
 
@@ -146,7 +150,7 @@ html {
 }
 
 [data-theme="dark"] .hero-description {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 [data-theme="dark"] .about-content {
@@ -364,6 +368,7 @@ html {
 
 .hero-title {
   font-size: clamp(2rem, 8vw, 7rem);
+  font-family: var(--header-font);
   line-height: 0.9;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -526,7 +531,7 @@ html {
 .main-heading {
   font-family: var(--primary-font);
   font-size: clamp(2rem, 10vw, 3rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 2rem;
   max-width: 80%;
@@ -550,6 +555,7 @@ html {
 
 .learn-more {
   font-family: var(--primary-font);
+  font-weight: 500;
   font-size: clamp(0.75rem, 2vw, 1.2rem);
   letter-spacing: 0.25em;
   color: var(--color-darkest);
@@ -612,6 +618,7 @@ html {
 
 .contact-link {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 500;
   color: var(--color-lightest);
   text-decoration: none;
   margin-bottom: clamp(3rem, 6vh, 4rem);
@@ -708,8 +715,8 @@ html {
 
   .theme-toggle {
     top: clamp(0.75rem, 2vh, 1.5rem);
-    right: clamp(7rem, 12vw, 12rem);
-    left: auto;
+    left: clamp(2rem, 6vw, 8rem);
+    right: auto;
   }
 
   [data-theme="dark"] .header-section {
@@ -758,10 +765,12 @@ html {
   }
 
   .menu-nav a {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 5vw, 2.6rem);
     color: var(--color-lightest);
     text-decoration: none;
     font-weight: 600;
+    font-family: var(--header-font);
+    letter-spacing: 0.1em;
     opacity: 0;
     transform: translateY(20px);
     transition: var(--transition-smooth);
@@ -852,7 +861,7 @@ html {
     margin-right: 0;
     font-size: clamp(1rem, 1.5vw, 1.1rem);
     line-height: 1.3;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   /*about*/
@@ -995,6 +1004,17 @@ html {
   .learn-more:active {
     transform: translateY(0.2rem);
     transition: transform 0.1s;
+  }
+
+  .heart-icon {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .title {
+    margin-top: 0;
+    font-family: var(--header-font);
+    font-weight: 800;
   }
 }
 
