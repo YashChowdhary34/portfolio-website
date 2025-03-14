@@ -31,6 +31,6 @@ To view or modify this deprecated portfolio locally:
    ```bash
    cd portfolio-website
 
-3. **Open index.html in Your Browser:
+3. **Open index.html in Your Browser:**
    - Double-click the index.html file
    - Alternatively, use a live-server extension in your code editor for a better development experience.
