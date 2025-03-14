@@ -1,6 +1,6 @@
 # Deprecated Portfolio Website
 
-**Note:** This repository contains my former portfolio website, which is no longer in use. For the latest version, please go ahead and visit my current portfolio. [Link](#https://github.com/YashChowdhary34/dev-portfolio)
+**Note:** This repository contains my former portfolio website, which is no longer in use. For the latest version, please go ahead and visit my current portfolio. [Link](https://github.com/YashChowdhary34/dev-portfolio)
 
 ## Overview
 
@@ -18,7 +18,6 @@ This project showcases my previous portfolio website, designed to highlight my s
 - `styles/`: Includes CSS files for styling.
 - `src/`: Holds JavaScript files for interactive elements.
 - `index.html`: The main landing page of the website.
-- `script.js`: Primary JavaScript file for dynamic behaviors.
 
 ## Setup Instructions
 
