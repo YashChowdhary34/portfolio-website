@@ -1,6 +1,6 @@
 # Deprecated Portfolio Website
 
-**Note:** This repository contains my former portfolio website, which is no longer in use. For the latest version, please go ahead and visit my current portfolio. [Link](https://github.com/YashChowdhary34/dev-portfolio)
+**Note:** This repository contains my former portfolio website, which is no longer in use. For the latest version, please go ahead and visit my current portfolio. [Click](https://github.com/YashChowdhary34/dev-portfolio)
 
 ## Overview
 
